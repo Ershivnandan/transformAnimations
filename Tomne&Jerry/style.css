@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(to bottom, #ea516d, #657d99);
+    min-height: 100vh; 
+}
+
+.blurTape{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background: transparent;
+    z-index: 9;
+    backdrop-filter: blur(3px);
+}
+
+.jerry img{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-60%);
+    z-index: 1;
+    width: 500px;
+    animation: rightToleft 3s ease-in-out infinite alternate;
+}
+.tom img{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 0;
+    width: 300px;
+    animation: leftToRight 3s ease-in-out infinite alternate;
+}
+
+@keyframes leftToRight {
+    0%{
+        left: 0
+    }
+    100%{
+        left: calc(100% - 300px)
+    }
+}
+@keyframes rightToleft {
+    0%{
+        right: 0
+    }
+    100%{
+        right: calc(100% - 500px)
+    }
+}
